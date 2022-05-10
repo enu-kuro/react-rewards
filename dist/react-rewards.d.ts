@@ -53,6 +53,7 @@ declare type RewardFunction = {
 declare type UseRewardType = <T extends RewardType>(id: string, type: T, config?: RewardConfigs[T]) => RewardFunction;
 
 declare const useReward: UseRewardType;
+declare const useRewardNoUseCallback: UseRewardType;
 
 declare const confetti: (root: Element, internalAnimatingCallback: () => void, config?: ConfettiConfig | undefined) => void;
 
@@ -60,4 +61,4 @@ declare const balloons: (root: Element, internalAnimatingCallback: () => void, c
 
 declare const emoji: (root: Element, internalAnimatingCallback: () => void, config?: EmojiConfig | undefined) => void;
 
-export { balloons, confetti, emoji, useReward };
+export { balloons, confetti, emoji, useReward, useRewardNoUseCallback };
